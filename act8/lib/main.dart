@@ -136,7 +136,6 @@ class _FadingHomeState extends State<FadingHome> {
         ],
       ),
 
-      // NEW: Back + Next floating buttons (Back goes 2 -> 1)
       floatingActionButton: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
@@ -212,7 +211,7 @@ class _FadePlaygroundState extends State<_FadePlayground> {
         ),
         Expanded(
           child: GestureDetector(
-            onTap: () => setState(() => _visible = !_visible), // tap-to-fade
+            onTap: () => setState(() => _visible = !_visible),
             child: Center(
               child: Column(
                 mainAxisSize: MainAxisSize.min,
@@ -233,7 +232,6 @@ class _FadePlaygroundState extends State<_FadePlayground> {
                     ),
                   ),
                   const SizedBox(height: 24),
-                  // Bonus: image card with rounded corners and optional frame
                   AnimatedContainer(
                     duration: const Duration(milliseconds: 300),
                     curve: Curves.easeOut,
@@ -331,7 +329,6 @@ class _PageDotsState extends State<_PageDots> {
   }
 }
 
-/// Simple no-package color picker (grid of swatches)
 class _ColorGridDialog extends StatelessWidget {
   final Color initial;
   const _ColorGridDialog({required this.initial});
